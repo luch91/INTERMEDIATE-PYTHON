@@ -1,4 +1,4 @@
-# classes that call one another.
+# classes that call one another. A vehicle garagae
 
 class Vehicle:
     def __init__(self, make, model, year):
@@ -35,6 +35,11 @@ class Garage:
         for vehicle in self.vehicles:
             vehicle.start()
 
+    def print_all_vehicles(self):
+        print("Vehicles in the garage: ")
+        for vehicle in self.vehicles:
+            print(f"{vehicle.make} {vehicle.model} ({vehicle.year}) with {vehicle.num_doors} doors")
+
 
 car1 = Car("Toyota", "Camry", 2021, 4)
 car2 = Car("Honda", "Civic", 2022, 2)
@@ -47,6 +52,8 @@ garage1.add_vehicle(car3)
 garage1.start_all_vehicles()
 garage1.remove_vehicle(car1)
 garage1.start_all_vehicles()
+
+garage1.print_all_vehicles()
 
 
 
