@@ -9,7 +9,7 @@ class BankAccount:
 
     def withdraw(self, amount):
         if self.balance < amount:
-            print("Insufficient balance")
+            print(f"Insufficient balance, your account balance is {self.balance} ")
         else:
             self.balance -= amount
             print(f"Withdrew {amount}. New balance: {self.balance}")
@@ -23,6 +23,7 @@ account1 = BankAccount("Alice", 1000)
 account2 = BankAccount("Bob", 600)
 
 account1.transfer(account2, 790)
+account2.withdraw(1800)
 
 
 
