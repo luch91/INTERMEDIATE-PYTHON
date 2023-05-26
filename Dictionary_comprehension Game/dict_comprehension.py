@@ -1,5 +1,6 @@
 # Dictionary comprehension
 # Syntax for creating a new dictionary from a list
+import pandas
 
 """
 From a list:
@@ -52,3 +53,25 @@ print(weather_f_dict)
 # to loop through dictionaries
 for (day, temp_celsius) in weather_f_dict.items():
     print(temp_celsius)
+
+# Looping through a Pandas Dataframe
+
+
+student_dict = {
+    "student": ["Angela", "James", "Lily"],
+    "score": [56, 57, 58]
+
+}
+student_data_frame = pandas.DataFrame(student_dict)
+print(student_data_frame)
+
+# Loop through the rows of a dataframe
+for (index, row) in student_data_frame.iterrows():
+    print(row)
+    print(row.student)
+    print(row.score)
+    if row.student == "James":
+        print(row.score)
+
+
+
