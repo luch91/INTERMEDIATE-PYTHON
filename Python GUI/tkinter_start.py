@@ -49,7 +49,7 @@ def button_clicked():
 window = Tk()
 window.title("My First GUI Program")
 window.minsize(width=500, height=300)
-window.config(padx=010, pady=200)
+window.config(padx=10, pady=200)
 
 # Label
 
@@ -70,3 +70,4 @@ input.grid(column=2, row=2)
 
 
 
+window.mainloop()
