@@ -40,3 +40,11 @@ def makepie(index):
         print(fruit + " pie")
 
 
+facebook_posts = [
+    {'Likes':21, 'Comments': 2},
+    {'Likes': 13, 'Comments': 8, 'Shares': 1},
+    {'Likes': 33, 'Comments': 2, 'Shares':6},
+    {'Comments': 1, 'Shares': 3},
+    {'Comments': 2, 'Shares': 5},
+    {'Likes':21, 'Comments': 2}
+]
