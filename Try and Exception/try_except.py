@@ -46,5 +46,18 @@ facebook_posts = [
     {'Likes': 33, 'Comments': 2, 'Shares':6},
     {'Comments': 1, 'Shares': 3},
     {'Comments': 2, 'Shares': 5},
-    {'Likes':21, 'Comments': 2}
+    {'Likes': 21, 'Comments': 2}
 ]
+
+total_likes = 0
+
+for post in facebook_posts:
+    try:
+        total_likes = total_likes + post['Likes']
+    except KeyError:
+#       total_likes += 0  #Adds 0 to the total likes
+        pass
+print(total_likes)
+
+
+
