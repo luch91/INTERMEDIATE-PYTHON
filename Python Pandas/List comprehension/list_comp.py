@@ -1,3 +1,4 @@
+
 # List comprehension: create a new list from another list using a line of code
 
 # old code
@@ -9,6 +10,12 @@ for n in numbers:
 new_list = new_num.append(addnew)
 print(new_num)
 """
+import random
+
+y = [[random.randint(1, 20) for x in range(5)] for i in range(5)]
+print(y)
+print(y[1])
+print(y[1][2])
 # one-line key
 # new_list = [new_item for item in list]
 
@@ -29,6 +36,9 @@ names = ["Joy", "Gladys", "Simeon", "Oluchukwu", "Shiloh", "Darlington"]
 new_names = [name for name in names if len(name) >= 7]
 new_names_upper = [name.upper() for name in names if len(name) >= 7]
 print(new_names_upper)
+
+x = [[j for j in (10, 15)] for i in range(9)]
+print(len(x))
 
 
 

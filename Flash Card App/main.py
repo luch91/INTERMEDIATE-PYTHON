@@ -3,9 +3,17 @@ import pandas
 import random
 
 BACKGROUND_COLOR = "#FFE7A0"
-data = pandas.read_csv("data/french_words.csv")
-to_learn = data.to_dict(orient="records") # converts to a list of dictionary
 current_card = {}
+to_learn = {}
+
+try:
+    data = pandas.read_csv("data/words_to_learn.csv")
+except FileNotFoundError:
+    original_data = pandas.read_csv("data/french_words.csv")
+    to_learn = original_data.to_dict(orient="records")
+else:
+    to_learn = data.to_dict(orient="records") # converts to a list of dictionary
+
 
 def next_card():
     global current_card, flip_timer
@@ -22,6 +30,10 @@ def flip_card():
 
 def is_known():
     """Removes current card from the list of cards  of  words"""
+    to_learn.remove(current_card)
+    data = pandas.DataFrame(to_learn)
+    data.to_csv("data/words_to_learn.csv", index=False)
+    next_card()
     
 
 
