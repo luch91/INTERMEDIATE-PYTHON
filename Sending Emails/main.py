@@ -30,8 +30,8 @@ date_of_birth = dt.datetime(year=1990, month=2, hour=13)
 print(date_of_birth)
 
 """
-my_email = "orluchee91@gmail.com"
-password = "orluchee-9191"
+my_email = "olr91@gmail.com"
+password = "acbd96@w"
 
 now = dt.datetime.now()
 week_day = now.weekday()
